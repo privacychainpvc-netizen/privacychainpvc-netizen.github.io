@@ -2,18 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>PrivacyChain — PVC! (test)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PrivacyChain — PVC!</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>PrivacyChain — PVC! (test page)</h1>
-  <p>If you see images below, everything works.</p>
+  <header class="topnav">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="PVC Logo" class="nav-logo" />
+      <span class="nav-title">PrivacyChain</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#eggs">Easter Eggs</a>
+    </nav>
+  </header>
 
-  <h2>Logo test</h2>
-  <img src="assets/logo.png" alt="PVC Logo" class="nav-logo" />
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>The most secure private protocol on Solana*.</h1>
+        <p>*Or at least that’s what marketing said.</p>
+        <p class="hero-sub">
+          Built on our patented <strong>Illusion-of-Security™</strong> framework,
+          PrivacyChain ($PVC) uses concepts like
+          “zero-knowledge fog compression” and “multi-layer opacity consensus”
+          to deliver privacy you can’t verify and we can’t explain.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn-primary">Learn more</a>
+          <button id="whitepaper-btn" class="btn-ghost">View Redacted Whitepaper</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>PVC Snapshot</h2>
+        <ul>
+          <li><span>Chain:</span> Solana</li>
+          <li><span>Type:</span> Meme-grade Privacy Protocol</li>
+          <li><span>Framework:</span> Illusion-of-Security™ v1</li>
+          <li><span>Status:</span> 100% serious & 100% satire</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- BANNER BELOW HERO -->
+  <section class="banner-section">
+    <img src="assets/banner.jpg" alt="PVC Banner" class="banner-img">
+  </section>
 
+  <main>
+    <section id="about" class="section">
+      <h2>What is PrivacyChain?</h2>
+      <p>
+        PrivacyChain ($PVC) is a parody–serious privacy protocol on Solana.
+        It exists for everyone who has ever nodded along to a crypto thread
+        about zero-knowledge, MPC, encrypted rollups or ephemeral keys…
+        and understood absolutely none of it.
+      </p>
+      <p>
+        Instead of pretending that everyone “gets” advanced privacy tech,
+        PrivacyChain embraces the reality: <strong>90% of crypto has no idea what’s going on,</strong>
+        but still wants to look professional while shilling.
+      </p>
+      <p>
+        PVC is that mirror: a project that looks and feels like a high-end
+        privacy protocol, while openly admitting the joke — and still leaving
+        room to become something real if the community decides to build.
+      </p>
+    </section>
 
-  <h2>Banner test</h2>
-  <img src="assets/logo.png" alt="PVC Logo" style="width:80px;margin-bottom:12px;" />
+    <section id="features" class="section section-grid">
+      <h2>Key Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Illusion-of-Security™</h3>
+          <p>
+            Our flagship framework. Packed with buzzwords, diagrams,
+            and just enough pseudo-math to look legitimate in screenshots.
+            The perfect layer to hide behind when someone asks,
+            “So how does it actually work?”
+          </p>
+        </article>
+        <article class="card">
+          <h3>Zero-Knowledge Fog Compression</h3>
+          <p>
+            Inspired by ZK proofs and fog machines at techno clubs.
+            We compress information into a dense cloud of “don’t worry about it,”
+            ideal for CT threads and panel discussions.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Multi-Layer Opacity Consensus</h3>
+          <p>
+            A consensus model where nobody is fully sure what’s happening,
+            but it looks amazing in a whitepaper. The more layers we add,
+            the more opaque it becomes — just like most tokenomics.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Pro Dev Roleplay Culture</h3>
+          <p>
+            PVC is built for memers, “devs”, and serious builders who enjoy the joke
+            but still want to ship something. You can act like a pro dev,
+            surrounded by others doing exactly the same.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tokenomics" class="section">
+      <h2>Tokenomics</h2>
+      <p>
+        PVC is designed to feel familiar to crypto natives while leaving space
+        for real evolution if the community decides to build serious tooling.
+        Numbers can be tuned, but the philosophy stays:
+        <strong>fair, transparent, and on-chain.</strong>
+      </p>
+
+      <div class="tokenomics-grid">
+        <div class="card">
+          <h3>Supply</h3>
+          <ul>
+            <li>Total supply: 1,000,000,000 PVC</li>
+            <li>Chain: Solana</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Initial Allocation (example)</h3>
+          <ul>
+            <li>50% — Liquidity & market</li>
+            <li>25% — Community & incentives</li>
+            <li>15% — Team & contributors (vested)</li>
+            <li>10% — Marketing & strategic partnerships</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Philosophy</h3>
+          <p>
+            Simple, transparent, meme-compatible.
+            No hidden unlocks, no surprise “oh btw” allocations.
+            If we change anything, it’s communicated publicly,
+            not buried in a PDF.
+          </p>
+        </div>
+      </div>
+      <p class="note">
+        <strong>Note:</strong> Final numbers adapt to the actual on-chain deployment,
+        but the structure remains simple and understandable.
+      </p>
+    </section>
+
+    <section id="roadmap" class="section">
+      <h2>Roadmap</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Phase 0 — Initialization Layer</h3>
+          <p><strong>Status:</strong> Completed</p>
+          <ul>
+            <li>Launch PVC on Solana.</li>
+            <li>Publish website & branding (Illusion-of-Security™ goes live).</li>
+            <li>Set the tone: “You don’t need to understand privacy tech. Nobody does. You’re safe here.”</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 1 — Obfuscation Framework Online</h3>
+          <p><strong>Status:</strong> In Progress</p>
+          <ul>
+            <li>Release redacted whitepaper & visual “architecture” diagrams.</li>
+            <li>Ship professional-looking docs that explain almost nothing.</li>
+            <li>Establish a visual identity (Raydium × Zcash × Scroll × Monero energy).</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 2 — Distracted Auditor Protocol</h3>
+          <p><strong>Status:</strong> Planned</p>
+          <ul>
+            <li>Open-source PVC demo utilities on GitHub.</li>
+            <li>Start collabs with privacy / infra / meme projects.</li>
+            <li>Release complex-looking dashboards for CT screenshots.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 3 — Multi-Shielded Meme Aggregator</h3>
+          <p><strong>Status:</strong> Upcoming</p>
+          <ul>
+            <li>Launch PVC merch aiming for $100k total volume.</li>
+            <li>Begin brand/trademark registrations where feasible.</li>
+            <li>Host spaces with privacy, infra, memecoins and builders.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 4 — Full Illusion-of-Security™ Suite</h3>
+          <p><strong>Status:</strong> Future</p>
+          <ul>
+            <li>Introduce PVC Labs: a playground for fake-serious privacy experiments.</li>
+            <li>Blend meme culture with real tools (education, content, light infra).</li>
+            <li>Explore long-term partnerships with serious privacy players.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="eggs" class="section">
+      <h2>Easter Eggs & Meta</h2>
+      <p>
+        PrivacyChain is built to be explored. Expect hidden messages, secret triggers,
+        and weird little surprises across the ecosystem.
+      </p>
+      <ul>
+        <li>Keyboard shortcuts on the site in future versions.</li>
+        <li>CLI tools that “pretend” to audit you.</li>
+        <li>Fake error messages that are actually on-chain jokes.</li>
+      </ul>
+      <p>
+        The goal is simple:
+        <strong>have fun, look professional, and admit we’re all figuring this out as we go.</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© PrivacyChain ($PVC) — Illusion-of-Security™. Satire first, potential second.</p>
+    <p class="footer-small">
+      This project is a meme/meta commentary on privacy coins and fake-deep tech.
+      Do not treat it as production-grade privacy infrastructure.
+    </p>
+  </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-inner">
+      <h3>Redacted Whitepaper</h3>
+      <p>
+        Section 1: ████████████████<br/>
+        Section 2: ████████ zk-████ fog ███████<br/>
+        Section 3: Consensus is achieved when everyone nods confidently.
+      </p>
+      <button id="close">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
