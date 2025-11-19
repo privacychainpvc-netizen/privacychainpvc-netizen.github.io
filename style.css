@@ -221,3 +221,108 @@ body {
   .section-grid .grid,
   .tokenomics-grid { grid-template-columns: 1fr; }
 }
+
+/* TERMINAL SECTION */
+.terminal-section {
+  margin-top: 30px;
+}
+
+.terminal-sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.terminal-window {
+  background: #050815;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 182, 255, 0.25);
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #02030a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.terminal-header .dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.terminal-header .red { background: #ff5f57; }
+.terminal-header .yellow { background: #febc2e; }
+.terminal-header .green { background: #26c940; }
+
+.terminal-title {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.terminal-body {
+  padding: 10px 12px 8px;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  color: #e3f3ff;
+  background: radial-gradient(circle at top left, rgba(47, 182, 255, 0.18), #050815 55%);
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+#terminal-output {
+  margin: 0 0 4px;
+  white-space: pre-wrap;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terminal-prompt {
+  color: #2fb6ff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #e3f3ff;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-hints {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.terminal-hints code {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Make sure terminal is nice on mobile */
+@media (max-width: 860px) {
+  .terminal-section {
+    padding: 0 20px;
+  }
+}
