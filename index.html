@@ -21,71 +21,62 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1>The most secure private protocol on Solana*.</h1>
-        <div class="whitepaper-buttons">
-  <button class="wp-btn" onclick="openWhitepaperModal()">View Redacted Whitepaper</button>
-  <a class="wp-btn download" href="assets/PVC_Whitepaper.pdf" target="_blank" download>
-    Download Full Whitepaper (PDF)
-  </a>
-</div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>The most secure private protocol on Solana*.</h1>
+      <p>*Or at least that’s what marketing said.</p>
+      <p class="hero-sub">
+        Built on our patented <strong>Illusion-of-Security™</strong> framework,
+        PrivacyChain ($PVC) uses concepts like “zero-knowledge fog compression”
+        and “multi-layer opacity consensus” to deliver privacy you can’t verify
+        and we can’t fully explain.
+      </p>
 
-        <p>*Or at least that’s what marketing said.</p>
-        <p class="hero-sub">
-          Built on our patented <strong>Illusion-of-Security™</strong> framework,
-          PrivacyChain ($PVC) uses concepts like “zero-knowledge fog compression”
-          and “multi-layer opacity consensus” to deliver privacy you can’t verify
-          and we can’t fully explain.
-        </p>
-        <div class="hero-cta">
-          <a href="#about" class="btn-primary">Learn more</a>
-          <button id="whitepaper-btn" class="btn-ghost">View Redacted Whitepaper</button>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h2>PVC Snapshot</h2>
-        <ul>
-          <li><span>Chain:</span> Solana</li>
-          <li><span>Type:</span> Privacy-focused protocol token</li>
-          <li><span>Framework:</span> Illusion-of-Security™ (IOS) layer</li>
-          <li><span>Status:</span> Live & community-driven</li>
-          <li>
-            <span>Contract:</span>
-            <code class="addr">PASTE_YOUR_CONTRACT_ADDRESS_HERE</code>
-          </li>
-          <li>
-            <span>Community:</span>
-            <a href="https://x.com/YOUR_X_HANDLE_HERE" target="_blank" rel="noopener">
-              Join us on X
-            </a>
-          </li>
-        </ul>
+      <!-- Whitepaper + Buy buttons under description -->
+      <div class="whitepaper-buttons">
+        <button class="wp-btn" onclick="openWhitepaperModal()">
+          View Redacted Whitepaper
+        </button>
+
+        <!-- ⚠️ CHANGE THE PDF NAME HERE TO MATCH YOUR FILE IN /assets -->
+        <a class="wp-btn download"
+           href="assets/PVC_Whitepaper.pdf"
+           target="_blank" rel="noopener">
+          Download Full Whitepaper (PDF)
+        </a>
+
+        <!-- ⚠️ CHANGE THIS LINK TO YOUR REAL DEXSCREENER URL WHEN READY -->
+        <a class="wp-btn buy"
+           href="https://dexscreener.com/"
+           target="_blank" rel="noopener">
+          Buy the Tech
+        </a>
       </div>
     </div>
-  </section>
 
-  <main>
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>What is PrivacyChain?</h2>
-      <p>
-        PrivacyChain ($PVC) is a meme-serious privacy protocol on Solana. It exists
-        for everyone who has ever nodded along to a thread about zero-knowledge,
-        MPC, encrypted rollups or ephemeral keys… and understood absolutely none of it.
-      </p>
-      <p>
-        Instead of pretending that everyone fully “gets” advanced privacy tech,
-        PrivacyChain embraces the reality: <strong>most of crypto has no idea what’s going on,</strong>
-        but still wants to look professional while shilling.
-      </p>
-      <p>
-        PVC is that mirror: a project that looks and feels like a high-end privacy protocol,
-        while openly admitting the joke — and still leaving room to become something real
-        if the community decides to build.
-      </p>
-    </section>
+    <div class="hero-card">
+      <h2>PVC Snapshot</h2>
+      <ul>
+        <li><span>Chain:</span> Solana</li>
+        <li><span>Type:</span> Privacy-focused protocol token</li>
+        <li><span>Framework:</span> Illusion-of-Security™ (IOS) layer</li>
+        <li><span>Status:</span> Live & community-driven</li>
+        <li>
+          <span>Contract:</span>
+          <code class="addr">PASTE_YOUR_CONTRACT_ADDRESS_HERE</code>
+        </li>
+        <li>
+          <span>Community:</span>
+          <a href="https://x.com/YOUR_X_HANDLE_HERE" target="_blank" rel="noopener">
+            Join us on X
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
     <!-- TERMINAL DIRECTLY UNDER ABOUT -->
     <section id="terminal" class="section terminal-section">
