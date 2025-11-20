@@ -15,7 +15,10 @@ const words = [
 let currentWordIndex = 0;
 let currentCharIndex = 0;
 let deleting = false;
-let typingElement = document.getElementById("terminal-typed");
+
+const typingElement = document.getElementById("terminal-typed");
+const outputEl = document.getElementById("terminal-output");
+const terminalBody = document.getElementById("terminal-body");
 
 function typeLoop() {
   if (!typingElement) return;
@@ -23,16 +26,14 @@ function typeLoop() {
   const word = words[currentWordIndex];
 
   if (!deleting) {
-    // typing
     typingElement.textContent = word.slice(0, currentCharIndex + 1);
     currentCharIndex++;
     if (currentCharIndex === word.length) {
       deleting = true;
-      setTimeout(typeLoop, 1000); // pause before deleting
+      setTimeout(typeLoop, 900);
       return;
     }
   } else {
-    // deleting
     typingElement.textContent = word.slice(0, currentCharIndex - 1);
     currentCharIndex--;
     if (currentCharIndex === 0) {
@@ -49,9 +50,6 @@ typeLoop();
 
 // ====== TERMINAL OUTPUT HELPER ======
 
-const outputEl = document.getElementById("terminal-output");
-const terminalBody = document.getElementById("terminal-body");
-
 function printToTerminal(line) {
   if (!outputEl) return;
   const existing = outputEl.textContent;
@@ -61,46 +59,45 @@ function printToTerminal(line) {
   }
 }
 
-// Initial boot text
-printToTerminal("Initializing IOS (Illusion-of-Security™) layer...");
+// Initial boot logs
+printToTerminal("Booting IOS (Illusion-of-Security™) layer...");
 printToTerminal("Connecting to Solana privacy relay...");
-printToTerminal("Status: ONLINE\n");
+printToTerminal("Status: ONLINE");
+printToTerminal("Hint: type PVC, SAFU, IOS or WTF.\n");
 
-// ====== CTRL + KEYWORD SHORTCUTS ======
+// ====== KEYWORD TRIGGERS (NO CTRL) ======
 
-let ctrlSequence = "";
+let seq = "";
 
 window.addEventListener("keydown", (e) => {
-  if (!e.ctrlKey) return;
+  const tag = document.activeElement.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA") return;
 
   const key = e.key.toUpperCase();
+  if (key.length !== 1 || !/[A-Z0-9]/.test(key)) return;
 
-  // ignore control keys themselves
-  if (key.length === 1 && /[A-Z0-9]/.test(key)) {
-    ctrlSequence += key;
-    if (ctrlSequence.length > 8) {
-      ctrlSequence = ctrlSequence.slice(-8);
-    }
+  seq += key;
+  if (seq.length > 10) {
+    seq = seq.slice(-10);
+  }
 
-    // Check sequences
-    if (ctrlSequence.endsWith("PVC")) {
-      printToTerminal("> Command received: PVC");
-      printToTerminal("PRIVACY MODE ENABLED. IOS shields calibrated.\n");
-      ctrlSequence = "";
-    } else if (ctrlSequence.endsWith("SAFU")) {
-      printToTerminal("> Command received: SAFU");
-      printToTerminal("STATUS: USER FUNDS MARKED AS SAFU*");
-      printToTerminal("*Illusion-of-Security™ may be involved.\n");
-      ctrlSequence = "";
-    } else if (ctrlSequence.endsWith("IOS")) {
-      printToTerminal("> Command received: IOS");
-      printToTerminal("Deploying Illusion-of-Security™ framework...");
-      printToTerminal("All systems obfuscated. Nobody knows what's going on.\n");
-      ctrlSequence = "";
-    } else if (ctrlSequence.endsWith("WTF")) {
-      printToTerminal("> Command received: WTF");
-      printToTerminal("ACCESS DENIED. YOU ARE NOT CLEARED FOR THIS LAYER.\n");
-      ctrlSequence = "";
-    }
+  if (seq.endsWith("PVC")) {
+    printToTerminal("> Command: PVC");
+    printToTerminal("PRIVACY MODE ENABLED. IOS shields calibrated.\n");
+    seq = "";
+  } else if (seq.endsWith("SAFU")) {
+    printToTerminal("> Command: SAFU");
+    printToTerminal("STATUS: FUNDS MARKED AS SAFU*");
+    printToTerminal("*Illusion-of-Security™ guarantees nothing, but it feels good.\n");
+    seq = "";
+  } else if (seq.endsWith("IOS")) {
+    printToTerminal("> Command: IOS");
+    printToTerminal("Deploying Illusion-of-Security™ framework...");
+    printToTerminal("All systems obfuscated. Nobody knows what's going on.\n");
+    seq = "";
+  } else if (seq.endsWith("WTF")) {
+    printToTerminal("> Command: WTF");
+    printToTerminal("ACCESS DENIED. You are not cleared for this layer.\n");
+    seq = "";
   }
 });
