@@ -359,3 +359,53 @@ body {
 .close:hover {
   color: var(--accent);
 }
+/* CA Popup */
+.ca-popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2100;
+}
+
+.ca-popup-inner {
+  background: #050815;
+  border-radius: 10px;
+  padding: 16px 18px 14px;
+  border: 1px solid rgba(47,182,255,0.5);
+  max-width: 420px;
+  width: calc(100% - 40px);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.ca-close {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.ca-close:hover {
+  color: var(--accent);
+}
+
+.addr-popup {
+  display: block;
+  margin: 6px 0 4px;
+  word-break: break-all;
+  background: rgba(255,255,255,0.04);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.ca-note {
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.9;
+}
