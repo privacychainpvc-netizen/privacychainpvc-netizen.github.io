@@ -101,3 +101,17 @@ window.addEventListener("keydown", (e) => {
     seq = "";
   }
 });
+function openWhitepaperModal() {
+  document.getElementById('whitepaper-modal').style.display = 'block';
+}
+
+function closeWhitepaperModal() {
+  document.getElementById('whitepaper-modal').style.display = 'none';
+}
+
+window.addEventListener('click', function(e) {
+  const modal = document.getElementById('whitepaper-modal');
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
